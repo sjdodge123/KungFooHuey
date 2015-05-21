@@ -21,7 +21,10 @@ package Construct
 			this.player1 = player1;
 			this.player2 = player2;
 			map1 = new GrassMap();
-	
+			
+			gameObjects.push(player1.fighter);
+			gameObjects.push(player2.fighter);
+			
 			map1.addPlayer(player1);
 			map1.addPlayer(player2);
 			addChild(map1);

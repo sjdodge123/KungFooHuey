@@ -6,11 +6,14 @@ package GameObjects.Fighters
 	
 	public class Stickman extends GameObject implements Fighter
 	{
+		private var body:Shape;
+		private var initialY:int;
 		public function Stickman(x:int,y:int)
 		{
 			this.x = x;
 			this.y = y;
-			var body:Shape = new Shape();
+			initialY = y;
+			body = new Shape();
 			body.graphics.beginFill(0x000000);
 			body.graphics.drawRect(0,0,20,-50);
 			body.graphics.endFill();
@@ -18,11 +21,14 @@ package GameObjects.Fighters
 		}
 		public override function update(dt:Number):void
 		{
-			
+			if(y < initialY)
+			{
+				y = y+2;
+			}
 		}
 		public function moveDown():void
 		{
-						
+				
 		}
 		public function moveLeft():void
 		{
@@ -34,7 +40,7 @@ package GameObjects.Fighters
 		}
 		public function moveUp():void
 		{
-			
+			y -= 20;
 		}
 	}
 }
