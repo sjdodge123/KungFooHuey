@@ -26,8 +26,9 @@ package GameObjects
 			EventDispatcher(this.inputHandler).addEventListener(MotionEvent.DOWN_PRESSED,downPressed);
 			EventDispatcher(this.inputHandler).addEventListener(MotionEvent.LEFT_PRESSED,leftPressed);
 			EventDispatcher(this.inputHandler).addEventListener(MotionEvent.RIGHT_PRESSED,rightPressed);
+			EventDispatcher(this.inputHandler).addEventListener(MotionEvent.ATTACK_PRESSED,attackPressed);
 		}
-		
+		 
 		protected function upPressed(event:Event):void
 		{
 			fighter.moveUp();			
@@ -43,6 +44,10 @@ package GameObjects
 		protected function rightPressed(event:Event):void
 		{
 			fighter.moveRight();			
+		}
+		protected function attackPressed(event:Event):void
+		{
+			fighter.attack();			
 		}
 	}
 }

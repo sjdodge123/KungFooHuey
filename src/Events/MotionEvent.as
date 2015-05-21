@@ -8,8 +8,9 @@ package Events
 		public static const LEFT_PRESSED:String = "left_pressed";
 		public static const DOWN_PRESSED:String = "down_pressed";
 		public static const RIGHT_PRESSED:String = "right_pressed";
-		
+		public static const ATTACK_PRESSED:String = "attack_pressed";
 		public var params:Object;
+		
 		public function MotionEvent(type:String,params:Object,bubbles:Boolean = false,cancelable:Boolean = false) 
 		{
 			

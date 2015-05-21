@@ -38,6 +38,11 @@ package Handlers
 					dispatchEvent(new MotionEvent(MotionEvent.RIGHT_PRESSED,null));
 					break;
 				}
+				case Keyboard.U:
+				{
+					dispatchEvent(new MotionEvent(MotionEvent.ATTACK_PRESSED,null));
+					break;
+				}
 			}
 			
 		}

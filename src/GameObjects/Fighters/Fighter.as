@@ -6,5 +6,6 @@ package GameObjects.Fighters
 		function moveDown():void
 		function moveRight():void
 		function moveLeft():void
+		function attack():void
 	}
 }
